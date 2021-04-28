@@ -1,0 +1,10 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/wsapp/MainActivity.java
+ com.example.wsapp.MainActivity
+ com.example.wsapp.MainActivity$1
+ com.example.wsapp.MainActivity$2
+ com.example.wsapp.MainActivity$3
+ com.example.wsapp.MainActivity$4
+com/example/wsapp/BuildConfig.java
+ com.example.wsapp.BuildConfig

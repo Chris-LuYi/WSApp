@@ -1,0 +1,4 @@
+#Wed Apr 28 11:50:02 SGT 2021
+base.0=D\:\\Projects\\Banchoon\\WSAPP\\wsapp\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
