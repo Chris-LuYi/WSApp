@@ -2,13 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
-  launchURL() async => await launch('https://flutter.io');
+  // launchURL() async => await launch('https://flutter.io');
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +50,10 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   void _onEvent(dynamic event) {
+    debugPrint('movieTitle: $event');
     setState(() {
       _chargingStatus =
-          "Battery status: ${event == 'charging' ? '' : 'dis'}charging.";
+          "Batt1ery status: ${event}";
     });
   }
 
@@ -70,20 +72,20 @@ class RandomWordsState extends State<RandomWords> {
           new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
         ],
       ),
-//      body: Text(_chargingStatus),
-       body: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-         children: <Widget>[
-           Text(_batteryLevel, key: const Key('Battery level label')),
-           Padding(
-             padding: const EdgeInsets.all(16.0),
-             child: ElevatedButton(
-               child: const Text('Refresh'),
-               onPressed: _getBatteryLevel,
-             ),
-           ),
-         ],
-       ),
+      body: Text(_chargingStatus),
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: <Widget>[
+      //     Text(_batteryLevel, key: const Key('Battery level label')),
+      //     Padding(
+      //       padding: const EdgeInsets.all(16.0),
+      //       child: ElevatedButton(
+      //         child: const Text('Refresh'),
+      //         onPressed: _getBatteryLevel,
+      //       ),
+      //     ),
+      //   ],
+      // ),
       // body: _buildSuggestions(),
     );
   }
